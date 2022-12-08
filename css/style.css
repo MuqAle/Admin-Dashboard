@@ -71,20 +71,20 @@ body{
     display: flex;
     flex-grow: 1;
     align-items: center;
+    gap: 10px;
 }
 
 .left_side .search_bar{
     flex: 1;
     border: none;
-    padding-top: .2em;
-    padding-bottom: .2em;
     padding-right: .5em;
-    padding-left: .5em;
+    padding-left: .5em; 
     background-color: var(--boxes-color);
-    font-size: 1em;
+    font-size: .8em;
     font-family: 'Rodin',sans-serif;
     color: var(--dark-markers);
     outline: none;
+    box-shadow: 3px 3px 0 #4d493e60;
 }
 
 [type="search"]::-webkit-search-cancel-button {
@@ -101,19 +101,28 @@ body{
     align-items: center;
     font-family: 'Rodin',sans-serif;
     color: var(--text-color);
-    font-size: .9rem
+    font-size: .9rem;
+    margin-right: 10px;
+    gap: 17px;
 }
 
 .search_img{
-    width: 2rem;
+    width: 1.3rem;
 }
 
 .notification{
-    width: 2rem;
+    width: 1.3rem;
 }
 
 .right_side .profile{
-    width: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--dark-markers);
+    border-radius: 50%;
+    background-image: url(../imgs/2BPrayingRein.webp);
+    background-repeat: no-repeat;
+    background-size: 410%;
+    background-position: 52% -3%;
 }
 
 .bottom_header{
@@ -126,14 +135,33 @@ body{
 .bottom_header .left_side{
     display: flex;
     padding: 0;
-    font-family: 'Rodin',sans-serif;
+    font-family: 'Rodin_bold',sans-serif;
+    font-style: bold;
     color: var(--text-color);
+    gap: 20px;
+    justify-content: center;
+}
+
+.greeting{
+    font-size: .8rem;
 }
 
 
 .bottom_header .profile{
     width: 5rem;
     height: 6rem;
+}
+
+.bottom_header .profile_img{
+    content: '';
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--dark-markers);
+    background-image: url(../imgs/2BPrayingRein.webp);
+    background-repeat: no-repeat;
+    background-size: 410%;
+    background-position: 52% -3%;
 }
 
 
@@ -144,6 +172,7 @@ body{
     padding-top: 2px;
     padding-bottom: 2px;
     margin-left: 10px;
+    margin-right: 10px;
     padding-left: 20px;
     padding-right: 20px;
     color: var(--text-color);
@@ -379,11 +408,43 @@ li .marker{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 30px 1fr 1fr 1fr;
+    box-shadow: 3px 3px 0 #4d493e60;
 }
 
 .projects .project_card{
     background-color: var(--text-box);
-    margin: 20px;
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 1fr 30px;
+}
+
+.project_card .mission_name{
+    color: var(--text-color);
+    font-family: 'Rodin_bold',sans-serif;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: .9rem;
+}
+
+.mission_report{
+    font-family:'Rodin', sans-serif;
+    line-height: 1.2;
+    color: var(--text-color);
+    font-size: .8rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.functions{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.function{
+    width: 1.1rem;
 }
 
 .main_container .right_side{
@@ -393,22 +454,52 @@ li .marker{
     padding-left: 10px;
 }
 
-.anouncement_card{
+.announcement_card{
     background-color: var(--boxes-color);
     display: grid;
-    grid-template-rows: 30px 1fr 1fr 1fr;
-
+    grid-template-rows: 30px repeat(3,1fr);
+    box-shadow: 3px 3px 0 #4d493e60
 }
 
-.anouncement:nth-of-type(-n+2){
-    border-bottom: solid var(--text-box);
+.announcement{
     margin-left: 10px;
     margin-right: 10px;
+    padding-top: 10px;
+}
+.announcement_card .announcement_title{
+    font-family: 'Rodin_bold', sans-serif;
+    font-style: bold;
+    line-height: 1;
+    font-size: .7rem;
+    color: var(--text-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+}
+
+.announcement_content{
+    font-family: 'Rodin', sans-serif;
+    text-overflow: ellipsis;
+    color: var(--text-color);
+    line-height: 1.2;
+    font-size: .6rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.announcement:nth-of-type(-n+2){
+    border-bottom: solid var(--text-box);
 }
 
 .trending{
     background-color: var(--boxes-color);
+    display: grid;
+    grid-template-rows: 30px repeat(4, 1fr);
+    box-shadow: 3px 3px 0 #4d493e60
+}
 
+.trending:nth-child(2){
+    margin-top: 1rem;
 }
 
 .right_side .title{
@@ -418,3 +509,63 @@ li .marker{
     padding-left: 10px;
 }
 
+.trending_page{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.trending_profile{
+    margin-top: 5px;
+}
+.trending_tag{
+    font-family: 'Rodin_bold',sans-serif;
+    color: var(--text-color);
+    font-size: .7rem;
+}
+
+.trending_name{
+    font-family: 'Rodin',sans-serif;
+    color: var(--text-color);
+    font-size: .6rem;
+    line-height: 1;
+    text-overflow: wrap;
+}
+
+.trending_img{
+    height: 35px;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 5px;
+    margin-left: 1.2rem;
+    width: 35px;
+    background-color: var(--dark-markers);
+}
+
+#A2{
+    background-image: url(../imgs/A2VengefulRein.webp);
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-position: 73% 5%;
+}
+
+#nineS{
+    background-image: url(../imgs/YoRHa_No.9_Type_S.webp);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: 60% .2%;
+}
+
+#kaine{
+    background-image: url(../imgs/NR2020_Kaine.webp);
+    background-repeat: no-repeat;
+    background-size: 220%;
+    background-position: 45% 13%;
+}
+
+#nier{
+    background-image: url(../imgs/NR2020_Nier_Old.webp);
+    background-repeat: no-repeat;
+    background-size: 400%;
+    background-position: 57% -2%;
+}
