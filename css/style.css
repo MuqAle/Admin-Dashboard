@@ -428,7 +428,7 @@ li .marker{
 
 .mission_report{
     font-family:'Rodin', sans-serif;
-    line-height: 1.2;
+    line-height: 1.5;
     color: var(--text-color);
     font-size: .8rem;
     margin-left: 20px;
@@ -469,7 +469,7 @@ li .marker{
 .announcement_card .announcement_title{
     font-family: 'Rodin_bold', sans-serif;
     font-style: bold;
-    line-height: 1;
+    line-height: 1.2;
     font-size: .7rem;
     color: var(--text-color);
     padding-left: 10px;
@@ -481,7 +481,7 @@ li .marker{
     font-family: 'Rodin', sans-serif;
     text-overflow: ellipsis;
     color: var(--text-color);
-    line-height: 1.2;
+    line-height: 1.5;
     font-size: .6rem;
     padding-left: 10px;
     padding-right: 10px;
